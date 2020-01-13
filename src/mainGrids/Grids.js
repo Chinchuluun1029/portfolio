@@ -4,9 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@mdi/react';
 import { mdiRocket, mdiSchoolOutline, mdiAccountBoxOutline } from '@mdi/js';
-
 import 'react-blink-text';
-
 import {
   Link,
 } from 'react-router-dom';
@@ -43,7 +41,7 @@ export default function Grids() {
   return (
     <div className={classes.root}>
       <h2 className={classes.title}>
-$ ~/chuka/portfolio/
+        $ ~/chuka/portfolio/
         <span className="blink">_</span>
       </h2>
       <Grid boxshadow={6} container spacing={4} direction="row" justify="center" alignItems="center">

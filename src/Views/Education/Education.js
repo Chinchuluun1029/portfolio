@@ -1,12 +1,9 @@
 import React from 'react';
 import '../../App.css';
-
-
 import Img from 'react-image';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
 import {
   Link,
 } from 'react-router-dom';
@@ -71,11 +68,11 @@ function Education() {
         message="Press on highlighted directory to return"
       />
       <h2 className={classes.title}>
-$ ~/chuka/
+        $ ~/chuka/
         <Link className={classes.linkBack} to="/home">portfolio</Link>
-/
+        /
         {isMobileOnly ? <br /> : null}
-education/
+        education/
         <span className="blink">_</span>
       </h2>
       <Paper className={classes.paper}>
@@ -90,7 +87,7 @@ education/
           <p>Cumulative GPA: 3.15 (yikes.)</p>
           <p>Engineering GPA: 3.33</p>
           <p>
-Relevant Coursework:
+            Relevant Coursework:
             <ul>
               <li>Calculus I, II, III</li>
               <li>Linear Algebra</li>
@@ -104,7 +101,7 @@ Relevant Coursework:
             </ul>
           </p>
           <p>
-Active Campus Roles:
+            Active Campus Roles:
             <ul>
               <li>Tech Lead @Change++</li>
               <li>Member @VandyApps</li>

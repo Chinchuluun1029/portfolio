@@ -18,7 +18,7 @@ function Contact() {
     // eslint-disable-next-line react/jsx-filename-extension
     <div className={classes.root} align="center">
       <h2 className={classes.title}>
-$ ~/chuka/portfolio/contact/
+        $ ~/chuka/portfolio/contact/
         <span className="blink">_</span>
       </h2>
       <Paper className={classes.paper}>

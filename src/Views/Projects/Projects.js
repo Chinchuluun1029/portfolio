@@ -1,19 +1,15 @@
 import React from 'react';
 import '../../App.css';
 import { makeStyles } from '@material-ui/core/styles';
-
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-
 import Snackbar from '@material-ui/core/Snackbar';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-
 import {
   Link,
 } from 'react-router-dom';
-
 import {
   isMobileOnly,
 } from 'react-device-detect';
@@ -101,11 +97,11 @@ function Projects() {
         message="Press on highlighted directory to return"
       />
       <h2 className={classes.h2}>
-$ ~/chuka/
+        $ ~/chuka/
         <Link className={classes.linkBack} to="/home">portfolio</Link>
-/
+        /
         {isMobileOnly ? <br /> : null}
-projects/
+        projects/
         <span className="blink">_</span>
       </h2>
       <Grid boxshadow={6} container spacing={4} direction="row" justify="center" alignItems="center">
@@ -177,7 +173,6 @@ projects/
               Simple implementation of the classic game with 2-D C++ array.
               </Typography>
             </CardContent>
-
           </Grid>
         </Card>
 
@@ -198,7 +193,6 @@ projects/
           </Grid>
         </Card>
 
-
         <Card className={classes.card}>
           <Grid item>
             <CardContent>
@@ -215,7 +209,6 @@ projects/
             </CardContent>
           </Grid>
         </Card>
-
 
         <Card className={classes.card}>
           <Grid item>
@@ -301,7 +294,6 @@ projects/
             </CardContent>
           </Grid>
         </Card>
-
       </Grid>
     </div>
   );
