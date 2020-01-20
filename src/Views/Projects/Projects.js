@@ -15,7 +15,9 @@ import {
 } from 'react-device-detect';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-
+import Chip from '@material-ui/core/Chip';
+import FaceIcon from '@material-ui/icons/Face';
+import LanguageIcon from '@material-ui/icons/Language';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -45,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: 14,
+    paddingBottom: 7,
   },
   lightGreen: {
     color: '#00ff00',
@@ -64,13 +67,21 @@ const useStyles = makeStyles((theme) => ({
     marginInlineStart: '0px',
     marginInlineEnd: '0px',
     fontWeight: 'bold',
-    color: '#00adb5',
+    color: '#03a9f4',
     fontFamily: "'Anonymous Pro', monospace",
   },
   linkBack: {
     textDecoration: 'none',
     color: '#121212',
-    backgroundColor: '#00adb5',
+    backgroundColor: '#03a9f4',
+  },
+  chips: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    alignContent: 'space-between',
+    flexWrap: 'wrap',
   },
 }));
 
@@ -117,7 +128,7 @@ function Projects() {
               <Typography variant="h5" component="h2">- - - - -</Typography>
 
               <Typography className={classes.title}>
-                  You&rsquo;re looking at it.
+                  Yep. This is it.
               </Typography>
             </CardContent>
           </Grid>
@@ -129,14 +140,14 @@ function Projects() {
             <CardContent>
               <div className={classes.titleProgress}>
                 <Typography variant="h5" component="h2">
-                    Game of Rent
+                  Game of Rent
                 </Typography>
                 <CircularProgress variant="static" value={10} color="#ffffff" />
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
 
               <Typography className={classes.title}>
-                  Making time management less cluttered
+                Gamifying the process of affordable housing.
               </Typography>
             </CardContent>
           </Grid>
@@ -153,7 +164,7 @@ function Projects() {
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
               <Typography className={classes.title}>
-              From ingredients to instant recipes.
+                From ingredients to instant recipes.
               </Typography>
             </CardContent>
           </Grid>
@@ -170,7 +181,7 @@ function Projects() {
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
               <Typography className={classes.title}>
-              Simple implementation of the classic game with 2-D C++ array.
+                Simple implementation of the classic game with 2-D array.
               </Typography>
             </CardContent>
           </Grid>
@@ -181,9 +192,26 @@ function Projects() {
             <CardContent>
               <div className={classes.titleProgress}>
                 <Typography variant="h5" component="h2">
-                    Sant Academy
+                  Sant Academy
                 </Typography>
-                <CircularProgress variant="static" value={100} color="#ffffff" />
+                <CheckCircleOutlineIcon style={{ color: '#00ff00', fontSize: '50px', margin: '0px' }} />
+              </div>
+              <Typography variant="h5" component="h2">- - - - -</Typography>
+              <Typography className={classes.title}>
+                Disrupting Education in Mongolia.
+              </Typography>
+            </CardContent>
+          </Grid>
+        </Card>
+
+        <Card className={classes.card}>
+          <Grid item>
+            <CardContent>
+              <div className={classes.titleProgress}>
+                <Typography variant="h5" component="h2">
+                  Pomodoro Clock
+                </Typography>
+                <CircularProgress variant="static" value={90} color="#ffffff" />
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
               <Typography className={classes.title}>
@@ -198,13 +226,13 @@ function Projects() {
             <CardContent>
               <div className={classes.titleProgress}>
                 <Typography variant="h5" component="h2">
-                    Pomodoro Clock
+                  GoPay
                 </Typography>
-                <CircularProgress variant="static" value={90} color="#ffffff" />
+                <CheckCircleOutlineIcon style={{ color: '#00ff00', fontSize: '50px', margin: '0px' }} />
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
               <Typography className={classes.title}>
-              Making time management less cluttered
+                Pioneering the cryptocurrency wallet in Mongolia.
               </Typography>
             </CardContent>
           </Grid>
@@ -215,13 +243,13 @@ function Projects() {
             <CardContent>
               <div className={classes.titleProgress}>
                 <Typography variant="h5" component="h2">
-                    GoPay
+                  GoSwitch
                 </Typography>
-                <CircularProgress variant="static" value={100} color="#ffffff" />
+                <CheckCircleOutlineIcon style={{ color: '#00ff00', fontSize: '50px', margin: '0px' }} />
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
               <Typography className={classes.title}>
-              Making time management less cluttered
+                A simple cryptocurrency converter.
               </Typography>
             </CardContent>
           </Grid>
@@ -232,13 +260,13 @@ function Projects() {
             <CardContent>
               <div className={classes.titleProgress}>
                 <Typography variant="h5" component="h2">
-                    GoSwitch
+                  GoTailan
                 </Typography>
-                <CircularProgress variant="static" value={100} color="#ffffff" />
+                <CheckCircleOutlineIcon style={{ color: '#00ff00', fontSize: '50px', margin: '0px' }} />
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
               <Typography className={classes.title}>
-              Making time management less cluttered
+                A web template for quarterly financial reports.
               </Typography>
             </CardContent>
           </Grid>
@@ -249,30 +277,13 @@ function Projects() {
             <CardContent>
               <div className={classes.titleProgress}>
                 <Typography variant="h5" component="h2">
-                    GoTailan
+                  GoCademy
                 </Typography>
-                <CircularProgress variant="static" value={100} color="#ffffff" />
+                <CheckCircleOutlineIcon style={{ color: '#00ff00', fontSize: '50px', margin: '0px' }} />
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
               <Typography className={classes.title}>
-              Making time management less cluttered
-              </Typography>
-            </CardContent>
-          </Grid>
-        </Card>
-
-        <Card className={classes.card}>
-          <Grid item>
-            <CardContent>
-              <div className={classes.titleProgress}>
-                <Typography variant="h5" component="h2">
-                    GoCademy
-                </Typography>
-                <CircularProgress variant="static" value={100} color="#ffffff" />
-              </div>
-              <Typography variant="h5" component="h2">- - - - -</Typography>
-              <Typography className={classes.title}>
-              Making time management less cluttered
+                Educating on blockchain and cryptocurrency.
               </Typography>
             </CardContent>
           </Grid>
@@ -285,12 +296,19 @@ function Projects() {
                 <Typography variant="h5" component="h2">
                     Project A.I.
                 </Typography>
-                <CircularProgress variant="static" value={100} color="#ffffff" />
+                <CheckCircleOutlineIcon style={{ color: '#00ff00', fontSize: '50px', margin: '0px' }} />
               </div>
               <Typography variant="h5" component="h2">- - - - -</Typography>
               <Typography className={classes.title}>
-              Making time management less cluttered
+                A web presentation on possible A.I. applications.
               </Typography>
+              <div className={classes.chips}>
+                <Chip className="chip" icon={<LanguageIcon />} label="HTML" />
+                <Chip className="chip" icon={<LanguageIcon />} label="CSS" />
+                <Chip className="chip" icon={<LanguageIcon />} label="JS" />
+                <Chip className="chip" icon={<LanguageIcon />} label="CSS" />
+                <Chip className="chip" icon={<LanguageIcon />} label="JS" />
+              </div>
             </CardContent>
           </Grid>
         </Card>

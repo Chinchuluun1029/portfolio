@@ -1,10 +1,6 @@
 import React from 'react';
 import './App.css';
 import Img from 'react-image';
-import Grids from './mainGrids/Grids';
-import Education from './Views/Education/Education';
-import Projects from './Views/Projects/Projects';
-import Contact from './Views/Contact/Contact';
 import {
   Redirect,
   BrowserRouter as Router,
@@ -12,6 +8,10 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+import Grids from './mainGrids/Grids';
+import Education from './Views/Education/Education';
+import Projects from './Views/Projects/Projects';
+import Contact from './Views/Contact/Contact';
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
             <Education />
           </Route>
 
-          <Route path="/contact">
+          <Route path="/About">
             <Contact />
           </Route>
 

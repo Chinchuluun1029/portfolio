@@ -2,7 +2,6 @@ import React from 'react';
 import '../../App.css';
 import Img from 'react-image';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {
   Link,
@@ -11,6 +10,8 @@ import Snackbar from '@material-ui/core/Snackbar';
 import {
   isMobileOnly,
 } from 'react-device-detect';
+
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#A8996E',
     wordWrap: 'break-word',
     color: '#000000',
-    lineHeight: '1.6rem',
+    lineHeight: '1.5rem',
     maxWidth: '50%',
     fontFamily: 'monospace',
   },
@@ -43,7 +44,20 @@ const useStyles = makeStyles((theme) => ({
     color: '#121212',
     backgroundColor: '#A8996E',
   },
+  listFont: {
+    fontFamily: "'Anonymous Pro', monospace",
+
+  },
 }));
+
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Anonymous Pro',
+    ].join(','),
+  },
+});
 
 function Education() {
   const classes = useStyles();
@@ -52,7 +66,6 @@ function Education() {
   });
 
   const { open } = state;
-
 
   const handleClose = () => {
     setState({ ...state, open: false });
@@ -82,12 +95,44 @@ function Education() {
 
         <Container className={classes.desc}>
 
-          <p>Major: Computer Science, NOT Mathematics</p>
+          <p>Major: Computer Science, Applied Mathematics</p>
           <p>Minor: Engineering Management</p>
-          <p>Cumulative GPA: 3.15 (yikes.)</p>
+          <p>Cumulative GPA: 3.15</p>
           <p>Engineering GPA: 3.33</p>
           <p>
             Relevant Coursework:
+        {/* <List>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <ImageIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ThemeProvider theme={theme}>
+              <Typography>
+                Calculus I, II, III
+              </Typography>
+        </ThemeProvider>
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <WorkIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="Work" secondary="Jan 7, 2014" />
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <BeachAccessIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary="Vacation" secondary="July 20, 2014" />
+          </ListItem>
+        </List> */}
+
+
             <ul>
               <li>Calculus I, II, III</li>
               <li>Linear Algebra</li>
