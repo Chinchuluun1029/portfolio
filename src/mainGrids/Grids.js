@@ -22,6 +22,7 @@ import EmailIcon from '@material-ui/icons/Email';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: '80vw',
     padding: '10vh 15vw',
     backgroundColor: '#121212',
   },
@@ -36,9 +37,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#03a9f4',
     fontFamily: "'Anonymous Pro', monospace",
     paddingBottom: '1.75rem',
-  },
-  gridName: {
-    textDecoration: 'none',
   },
   icons: {
     display: 'flex',
@@ -62,6 +60,7 @@ const ColorButton = withStyles(() => ({
       boxShadow: 'none',
     },
   },
+  
 }))(Button);
 
 export default function Grids() {
@@ -76,7 +75,7 @@ export default function Grids() {
       </h2>
       <Grid boxshadow={6} container spacing={4} direction="row" justify="center" alignItems="center">
         <Grid item>
-          <Link to="/about">
+          <Link to="/about" style={{ textDecoration: 'none' }}>
             <Paper className={classes.paper} elevation={20}>
               <Icon
                 path={mdiPacMan}
@@ -89,7 +88,7 @@ export default function Grids() {
           </Link>
         </Grid>
         <Grid item>
-          <Link to="/education" classname={classes.gridName}>
+          <Link to="/education" style={{ textDecoration: 'none' }}>
             <Paper className={classes.paper} elevation={20}>
               <Icon
                 path={mdiSchoolOutline}
@@ -102,7 +101,7 @@ export default function Grids() {
           </Link>
         </Grid>
         <Grid item>
-          <Link to="/projects">
+          <Link to="/projects" style={{ textDecoration: 'none' }}>
             <Paper className={classes.paper} elevation={20}>
               <Icon
                 path={mdiRocket}
@@ -121,7 +120,7 @@ export default function Grids() {
             <GitHubIcon fontSize="large" />
           </ColorButton>
         </a>
-        <a href="https://linkedin.com/chinchuluun" rel="noopener noreferrer" target="_blank">
+        <a href="https://www.linkedin.com/in/chinchuluun/" rel="noopener noreferrer" target="_blank">
           <ColorButton aria-label="linkedin">
             <LinkedInIcon fontSize="large" />
           </ColorButton>

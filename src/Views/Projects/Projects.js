@@ -302,13 +302,13 @@ function Projects() {
               <Typography className={classes.title}>
                 A web presentation on possible A.I. applications.
               </Typography>
-              <div className={classes.chips}>
+              {/* <div className={classes.chips}>
                 <Chip className="chip" icon={<LanguageIcon />} label="HTML" />
                 <Chip className="chip" icon={<LanguageIcon />} label="CSS" />
                 <Chip className="chip" icon={<LanguageIcon />} label="JS" />
                 <Chip className="chip" icon={<LanguageIcon />} label="CSS" />
                 <Chip className="chip" icon={<LanguageIcon />} label="JS" />
-              </div>
+              </div> */}
             </CardContent>
           </Grid>
         </Card>

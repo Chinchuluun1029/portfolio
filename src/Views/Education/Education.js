@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     textAlign: 'left',
     margin: '5vh 0',
-    backgroundColor: '#A8996E',
+    backgroundColor: '#03a9f4',
     wordWrap: 'break-word',
     color: '#000000',
     lineHeight: '1.5rem',
@@ -35,14 +35,14 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   title: {
-    color: '#A8996E',
+    color: '#03a9f4',
     fontFamily: "'Anonymous Pro', monospace",
     padding: '0.5rem 0',
   },
   linkBack: {
     textDecoration: 'none',
     color: '#121212',
-    backgroundColor: '#A8996E',
+    backgroundColor: '#03a9f4',
   },
   listFont: {
     fontFamily: "'Anonymous Pro', monospace",
@@ -50,14 +50,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: [
-      'Anonymous Pro',
-    ].join(','),
-  },
-});
 
 function Education() {
   const classes = useStyles();
