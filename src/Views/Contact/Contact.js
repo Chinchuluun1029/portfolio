@@ -3,26 +3,41 @@ import '../../App.css';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Img from 'react-image';
 import Card from '@material-ui/core/Card';
-import {
-  Link,
-} from 'react-router-dom';
-import {
-  isMobileOnly,
-} from 'react-device-detect';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
+
+import isMobileOnly from 'react-device-detect';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '100vw',
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    alignContent: 'flex-start',
     fontSize: '1.5rem',
     backgroundColor: '#121212',
   },
+  profile: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
   h2: {
     display: 'block',
+    flexGrow: 1,
     fontSize: '1.5em',
-    marginBlockStart: '0.83em',
-    marginBlockEnd: '0.83em',
+    marginBottom: 0,
     marginInlineStart: '0px',
     marginInlineEnd: '0px',
     fontWeight: 'bold',
@@ -46,6 +61,14 @@ const useStyles = makeStyles((theme) => ({
     margin: '1.5rem',
     backgroundColor: '#121212',
     color: '#03a9f4',
+  },
+  wikiProfile: {
+    maxWidth: 275,
+    backgroundColor: '#03a9f4',
+    margin: '1.5rem',
+    padding: theme.spacing(4),
+    textAlign: 'left',
+    fontFamily: "'Anonymous Pro', monospace",
   },
   paper: {
     padding: theme.spacing(4),
@@ -83,6 +106,28 @@ function Contact() {
             Oh, and my contact info and social media are below the homepage.
           </p>
         </Paper>
+      </Card>
+      <Card className={classes.wikiProfile}>
+        <CardActionArea>
+          <Img className={classes.schoolLogo} src="./chuka.jpg" width="200px" crossorigin="anonymous" />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              Lizard
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+              across all continents except Antarctica
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Share
+          </Button>
+          <Button size="small" color="primary">
+            Learn More
+          </Button>
+        </CardActions>
       </Card>
     </div>
   );
