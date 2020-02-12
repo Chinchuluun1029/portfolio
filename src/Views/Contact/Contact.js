@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     alignItems: 'flex-start',
     alignContent: 'flex-start',
+    justifyContent: 'center',
     fontSize: '1.5rem',
     backgroundColor: '#121212',
   },
@@ -59,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 275,
     maxWidth: '80vw',
     margin: '1.5rem',
+    textAlign: 'center',
     backgroundColor: '#121212',
     color: '#03a9f4',
   },
@@ -67,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#03a9f4',
     margin: '1.5rem',
     padding: theme.spacing(4),
-    textAlign: 'left',
+    textAlign: 'center',
     fontFamily: "'Anonymous Pro', monospace",
   },
   paper: {
@@ -107,12 +109,12 @@ function Contact() {
           </p>
         </Paper>
       </Card>
-      <Card className={classes.wikiProfile}>
+      {/* <Card className={classes.wikiProfile}>
         <CardActionArea>
           <Img className={classes.schoolLogo} src="./chuka.jpg" width="200px" crossorigin="anonymous" />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Lizard
+              Chuka Munkh-Achit
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -128,7 +130,7 @@ function Contact() {
             Learn More
           </Button>
         </CardActions>
-      </Card>
+      </Card> */}
     </div>
   );
 }

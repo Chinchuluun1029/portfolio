@@ -226,6 +226,23 @@ function Projects() {
             <CardContent>
               <div className={classes.titleProgress}>
                 <Typography variant="h5" component="h2">
+                  AGM Timeline
+                </Typography>
+                <CheckCircleOutlineIcon style={{ color: '#00ff00', fontSize: '50px', margin: '0px' }} />
+              </div>
+              <Typography variant="h5" component="h2">- - - - -</Typography>
+              <Typography className={classes.title}>
+                Live-updated day-of event scheduler.
+              </Typography>
+            </CardContent>
+          </Grid>
+        </Card>
+
+        <Card className={classes.card}>
+          <Grid item>
+            <CardContent>
+              <div className={classes.titleProgress}>
+                <Typography variant="h5" component="h2">
                   GoPay
                 </Typography>
                 <CheckCircleOutlineIcon style={{ color: '#00ff00', fontSize: '50px', margin: '0px' }} />
